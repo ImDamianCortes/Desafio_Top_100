@@ -1,13 +1,21 @@
+body {
+  background-color: rgba(128, 128, 128, 0.041);
+}
+embed {
+  height: 700px;
+}
+
 pre {
     width: 100%;
     background-color: rgba(33, 37, 41);
     color: yellowgreen;
-  }
+}
   
-  code {
+code {
     margin-left: 10px;
     
-  }
+}
+
 p {
     margin-top: 10px;
 }
