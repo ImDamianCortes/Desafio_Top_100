@@ -128,122 +128,110 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <pre><code>SELECT id FROM peliculas WHERE pelicula='Titanic';</code></pre>
+                        <img src="assets/img/ID PELICULA TITANIC.PNG" alt="">
                     </div>
                 </div>
             </div>
             <!-- Item 04 -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
+                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                        aria-controls="collapseFour">
                         4.   Listar a todos los actores que aparecen en la película "Titanic".
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <p>En este caso se utiliza una consulta anidada en la condicion</p>
+                        <pre><code>SELECT reparto FROM reparto WHERE id=(SELECT id FROM peliculas WHERE pelicula='Titanic');</code></pre>
+                        <img src="assets/img/REPARTO TITANIC.PNG" alt="">
                     </div>
                 </div>
             </div>
             <!-- Item 05 -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="headingFive">
                     <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
+                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                        aria-controls="collapseFive">
                         5.   Consultar en cuántas películas del top 100 participa Harrison Ford.
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <pre><code>SELECT COUNT (id) AS total_participacion_t100_Harrison_Ford FROM reparto WHERE reparto='Harrison Ford';</code></pre>
+                        <img src="assets/img/PELICULAS HARRISON FORD.PNG" alt="">
                     </div>
                 </div>
             </div>
             <!-- Item 06 -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="headingSix">
                     <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
+                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                        aria-controls="collapseSix">
                         6.   Indicar las películas estrenadas entre los años 1990 y 1999 ordenadas por título de manera ascendente.
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <pre><code>SELECT id,pelicula,ano_estreno FROM peliculas WHERE ano_estreno BETWEEN '1990' AND '1999' ORDER BY ano_estreno ASC;</code></pre>
+                        <img src="assets/img/FILTRO AÑOS 90 A 99.PNG" alt="">
                     </div>
                 </div>
             </div>
             <!-- Item 07 -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="headingSeven">
                     <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
+                        data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                        aria-controls="collapseSeven">
                         7.   Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser nombrado para la consulta como “longitud_titulo”.
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <pre><code>SELECT id,pelicula, LENGTH(pelicula) AS longitud_titulo FROM peliculas;</code></pre>
+                        <img src="assets/img/LONGITUD TITULOS.PNG" alt="">
                     </div>
                 </div>
             </div>
             <!-- Item 08 -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="headingEigth">
                     <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
+                        data-bs-toggle="collapse" data-bs-target="#collapseEigth" aria-expanded="false"
+                        aria-controls="collapseEigth">
                         8.   Consultar cual es la longitud más grande entre todos los títulos de las películas.
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                <div id="collapseEigth" class="accordion-collapse collapse" aria-labelledby="headingEigth"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <p>Inicialmemnte de busca dentro de los titulos de peliculas el maximo largo.</p>
+                        <pre><code>SELECT MAX(LENGTH(pelicula)) AS longitud_max_titulo FROM peliculas;</code></pre>
+                        <img src="assets/img/MAX LENGTH.PNG" alt="">
+                        <p>Debido a que el solo se mustra el largo y no los datos se utiliza una consulta anidada para mostrar la id-titulo y el largo cuando se cumpla la condicion de que el largo sea igual al maximo largo encontrado.</p>
+                        <pre><code>SELECT id,pelicula, LENGTH(pelicula) AS max_longitud_titulo FROM peliculas WHERE LENGTH(pelicula)=(SELECT MAX(LENGTH(pelicula)) FROM peliculas);</code></pre>
+                        <img src="assets/img/MAX LENGTH ANIDADO.PNG" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Comentario -->
+    <section class="container pt-5">
+        <h5 class="text-info"><strong>Nota: </strong>pendiente comentar y revisar desde los Items 4 en adelante.</h5>
+    </section>
+    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
